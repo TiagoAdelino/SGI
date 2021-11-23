@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vintage Bed</title>
+
+</head>
+
+<body>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <style>
+    body {
+      overflow: auto;
+      background-color: white;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  </style>
+
+
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+    <button class="btn btn-outline-light" type="button">
+      <a href="index.html"><img src="resources/la-redoute-logo.svg" style="width: 150px; height: auto;"></a>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">País </a>
+          <div class="dropdown-menu dropdown-primary text-dark" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Portugal</a>
+            <a class="dropdown-item" href="#">Espanha</a>
+            <a class="dropdown-item" href="#">França</a>
+            <a class="dropdown-item" href="#">Itália</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <form class="form-inline ml-auto">
+        <div class="md-form my-0">
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search" style="width: 500px;">
+        </div>
+        <button href="#!" class="btn btn-outline-white btn-md my-0 ml-sm-2" type="submit"><img
+            src="resources/search-icon.svg" style="width: 20px; height: auto;"></button>
+      </form>
+    </div>
+    <!-- Collapsible content -->
+
+  </nav>
+
+  <nav class="nav nav-pills nav-fill">
+    <a class="nav-item nav-link btn-outline-dark" href="#">Moda</a>
+    <a class="nav-item nav-link btn-outline-dark" href="#">Casa</a>
+    <a class="nav-item nav-link btn-outline-dark" href="#">Eletrodomésticos</a>
+    <a class="nav-item nav-link btn-outline-dark" href="#">Magazie de Tendências</a>
+    <a class="nav-item nav-link btn-outline-danger" href="#">Outlet</a>
+    <a class="nav-item nav-link btn-outline-danger" href="#">La Redoute for Business</a>
+  </nav>
+  <p></p>
+
+  <!--FIM DA PARTE COMUN-->
+  <!-- ======================================================================================================================== -->
+
+
+  <script src="JS/three.min.js"></script>
+  <script src="JS/GLTFLoader.js"></script>
+  <script src="JS/OrbitControls.js"></script>
+
+  <canvas id="Canvas"></canvas>
+  <script class="img-fluid" src="main.js"></script>
+
+  <div class="jumbotron text-center">
+    <label class="mdb-main-label">Cor:</label>
+    <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..">
+      <option id="btn_cor_branco" value="1">Branco</option>
+      <option id="btn_cor_branco" value="2">Preto</option>
+    </select>
+    <p>
+      <button id="btn_material" class="btn btn-outline-secondary btn-sm">Mudar material</button>
+      <button id="btn_animation" class="btn btn-outline-secondary btn-sm">Rodar (animação)</button>
+    </p>
+    <a class="card-title">Cama para 1 pessoa Scandi<p><b>639.00 €</b></p></a>
+  </div>
+
+  <p></p>
+  <footer class="page-footer font-small mdb-color text-light bg-dark pt-4">
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left text-light bg-dark">
+
+      <!-- Footer links -->
+      <div class="row text-center text-md-left mt-3 pb-3 text-light bg-dark">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 text-light bg-dark">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Tudo sobre:</h6>
+          <p class="text-justify">Camas - Poderá encontrar na La Redoute uma vasta gama de Camas com descontos
+            fantásticos.
+            Desde camas com estrado, camas com plataforma, camas em freixo maciço e tecido, cama + sommier,
+            camas com compartimento, camas com cabeceira de almofadas, cama-arca com estrado elevatório,
+            camas com plataforma, camas com arrumação até camas em rotim de kubu.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">LA REDOUTE</h6>
+          <p>
+            <a href="#!">Quem Somos</a>
+          </p>
+          <p>
+            <a href="#!">Ajuda</a>
+          </p>
+          <p>
+            <a href="#!">Trocas&Devoluções</a>
+          </p>
+          <p>
+            <a href="#!">Guia de Tamanhos</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">MODOS DE PAGAMENTO</h6>
+          <p>
+            <a href="#!">Multibanco</a>
+          </p>
+          <p>
+            <a href="#!">MB Way</a>
+          </p>
+          <p>
+            <a href="#!">Visa/Mastercard</a>
+          </p>
+          <p>
+            <a href="#!">PayPal/Oney</a>
+          </p>
+        </div>
+
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Contacte-nos através de:</h6>
+          <p class="text-justify">
+            <i class="fas fa-home mr-3"></i>Zona Industrial da Barosa, Rua Beco dos Petigais - Fração F, nº45 e 65 2400-431 Leiria
+          </p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i>contacto@redoute.pt
+          </p>
+          <p>
+            <i class="fas fa-phone mr-3"></i>707 20 10 10
+          </p>
+          <p>
+            <i class="fas fa-print mr-3"></i>244 81 00 00
+          </p>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Footer links -->
+
+      <hr>
+
+      <!-- Grid row -->
+      <div class="row d-flex align-items-center">
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8">
+
+          <!--Copyright-->
+          <p class="text-md-left">Developers:
+            <strong> Beatriz Ribeiro nº 2191196 & Tiago Vieira nº 2200654</strong>
+            </a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

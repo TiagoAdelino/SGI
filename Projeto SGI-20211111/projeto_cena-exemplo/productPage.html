@@ -90,8 +90,9 @@
   <script src="JS/GLTFLoader.js"></script>
   <script src="JS/OrbitControls.js"></script>
 
-  <canvas id="Canvas"></canvas>
-  <script class="img-fluid" src="main.js"></script>
+  <div style="text-align: center;">
+    <canvas id="meuCanvas"></canvas>
+  </div>
 
   <div class="jumbotron text-center">
     <label class="mdb-main-label">Cor:</label>
@@ -172,7 +173,8 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Contacte-nos através de:</h6>
           <p class="text-justify">
-            <i class="fas fa-home mr-3"></i>Zona Industrial da Barosa, Rua Beco dos Petigais - Fração F, nº45 e 65 2400-431 Leiria
+            <i class="fas fa-home mr-3"></i>Zona Industrial da Barosa, Rua Beco dos Petigais - Fração F, nº45 e 65
+            2400-431 Leiria
           </p>
           <p>
             <i class="fas fa-envelope mr-3"></i>contacto@redoute.pt
@@ -206,6 +208,12 @@
       </div>
     </div>
   </footer>
+
+  <script src="/node_modules/three/build/three.min.js"></script>
+  <script src="/node_modules/three/examples/js/controls/OrbitControls.js"></script>
+  <script src="/node_modules/three/examples/js/loaders/GLTFLoader.js"></script>
+
+  <script src="main.js"></script>
 </body>
 
 </html>

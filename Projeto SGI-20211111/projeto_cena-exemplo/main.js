@@ -4,6 +4,7 @@ let botaoStop = document.getElementById("btn_stop")
 
 var cena = new THREE.Scene()
 let material = new THREE.MeshNormalMaterial();
+cena.background = new THREE.Color(0xffffff);
 
 var meuCanvas = document.getElementById( 'meuCanvas' )
 var renderer = new THREE.WebGLRenderer( { canvas: meuCanvas } )
@@ -11,11 +12,11 @@ var renderer = new THREE.WebGLRenderer( { canvas: meuCanvas } )
 var relogio = new THREE.Clock()
 var misturador = new THREE.AnimationMixer(cena)
 
-var camara = new THREE.PerspectiveCamera( 70, 800 / 500, 0.1, 500)
+var camara = new THREE.PerspectiveCamera( 70, 800 / 700, 0.1, 500)
 camara.position.set( -10, 10, 12 )
 camara.lookAt( 0, 0, 0 )
 
-renderer.setSize( 800, 500 )
+renderer.setSize( 800, 700 )
 renderer.shadowMap.enabled = false
 //document.body.appendChild( renderer.domElement )
 

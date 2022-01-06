@@ -95,16 +95,21 @@
   </div>
 
   <div class="jumbotron text-center">
-    <label class="mdb-main-label">Cor:</label>
-    <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..">
-      <option id="btn_cor_branco" value="1">Branco</option>
-      <option id="btn_cor_branco" value="2">Preto</option>
-    </select>
     <p>
-      <button id="btn_material" class="btn btn-outline-secondary btn-sm">Começar animação</button>
-      <button id="btn_animation" class="btn btn-outline-secondary btn-sm">Parar animação</button>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-outline-secondary active">
+          <input type="radio" name="options" id="optionRodar" autocomplete="off" checked> Rodar
+        </label>
+        <label class="btn btn-outline-secondary">
+          <input type="radio" name="options" id="optionParar" autocomplete="off"> Parar
+        </label>
+        <label class="btn btn-outline-secondary">
+          <input type="radio" name="options" id="optionAnimacao" autocomplete="off"> Animação
+        </label>
+      </div>
     </p>
     <a class="card-title">Mesa de jardinagem, em acácia, Wassif<p><b>299.00 €</b></p></a>
+    <button id="btn_material" class="btn btn-success btn-sm">Adicionar ao carrinho</button>
   </div>
 
   <p></p>

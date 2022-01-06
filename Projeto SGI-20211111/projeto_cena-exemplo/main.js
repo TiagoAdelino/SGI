@@ -34,6 +34,7 @@ carregador.load(
             if (x.isMesh) {
                 x.castShadow = true
                 x.receiveShadow = true
+                
             }
         })
         clipe = THREE.AnimationClip.findByName( gltf.animations, 'KeyAction' )
@@ -60,6 +61,26 @@ cena.add(luz3)
 
 var ambiente = new THREE.AmbientLight('white')
 cena.add(ambiente)
+
+let botao_rodar = document.getElementById("optionRodar")
+let botao_parar = document.getElementById("optionParar")
+let botao_animacao = document.getElementById("optionAnimacao")
+
+botao_rodar.addEventListener("click", rodar)
+botao_parar.addEventListener("click", parar)
+botao_animacao.addEventListener("click", comecar)
+
+function rodar(){
+    acaoY.play()
+}
+
+function parar(){
+    acaoY.stop()
+}
+
+function comecar(){
+    acaoY.play()
+}
 
 var raycaster = new THREE.Raycaster()
 var rato = new THREE.Vector2()

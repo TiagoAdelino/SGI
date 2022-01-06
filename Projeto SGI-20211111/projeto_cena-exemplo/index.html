@@ -26,8 +26,6 @@
         }
 
         img {
-            width: 100%;
-            height: auto;
             object-fit: cover;
         }
     </style>
@@ -87,6 +85,9 @@
     <!-- ======================================================================================================================== -->
 
 
+    <script src="three.min.js"></script>
+    <script src="GLTFLoader.js"></script>
+    <script src="OrbitControls.js"></script>
 
     <!--Criação do header do website-->
     <div class="container">
@@ -94,28 +95,6 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="card">
-                        <!--Criação de separadores sobre a informação do sensor de temperatura-->
-
-                        <script src="three.min.js"></script>
-                        <script src="GLTFLoader.js"></script>
-                        <script src="OrbitControls.js"></script>
-
-                        <div class="card-img-top"><button class="btn" alt="Card image cap">
-                                <a href="productPage.html"><img src="Other products/Cama-projeto.png" width="300"
-                                        height="300"></a>
-                            </button></div>
-
-                        <div class=card-body>
-                            <button id="btn_cor" class="btn btn-outline-secondary btn-sm">Mudar cor</button>
-                            <button id="btn_material" class="btn btn-outline-secondary btn-sm">Mudar material</button>
-                        </div>
-                        <div class="card-title">Mesa de jardinagem, em acácia, Wassif<p><b>299.00 €</b></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="card">
-                        <!--Criação de separadores sobre a informação do sensor de temperatura-->
                         <div class="card-img-top"><button class="btn" alt="Card image cap">
                                 <img src="resources/Mesas/mesa_2.jpg" width="300" height="300">
                             </button></div>
@@ -131,8 +110,22 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card">
-                        <!--Criação de separadores sobre a informação do sensor de temperatura-->
+                        <div class="card-img-top"><button class="btn" alt="Card image cap">
+                                <a href="productPage.html"><img src="resources/Mesas/MesaProjeto.jpg" width="300"
+                                        height="300"></a>
+                            </button></div>
 
+                        <div class=card-body>
+                            <button id="btn_cor" class="btn btn-outline-secondary btn-sm">Mudar cor</button>
+                            <button id="btn_material" class="btn btn-outline-secondary btn-sm">Mudar material</button>
+
+                        </div>
+                        <div class="card-title">Mesa de jardinagem, em acácia, Wassif<p><b>299.00 €</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
                         <div class="card-img-top"><button class="btn" alt="Card image cap">
                                 <img src="resources/Mesas/mesa_3.jpg" width="300" height="300">
                             </button></div>
@@ -151,8 +144,6 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="card">
-                        <!--Criação de separadores sobre a informação do sensor de temperatura-->
-
                         <div class="card-img-top"><button class="btn" alt="Card image cap">
                                 <img src="resources/Mesas/mesa_4.jpg" width="300" height="300">
                             </button></div>
@@ -166,13 +157,10 @@
                         </div>
                     </div>
                 </div>
-                <!--<script src="main.js"></script> -->
                 <div class="col-sm-4">
                     <div class="card">
-                        <!--Criação de separadores sobre a informação do sensor de temperatura-->
-
                         <div class="card-img-top"><button class="btn" alt="Card image cap">
-                                <img src="resources/Mesas/mesa_5.jpg">
+                                <img src="resources/Mesas/mesa_5.jpg" width="300" height="300">
                             </button></div>
 
                         <div class=card-body>
@@ -186,10 +174,8 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card">
-                        <!--Criação de separadores sobre a informação do sensor de temperatura-->
-
                         <div class="card-img-top"><button class="btn" alt="Card image cap">
-                                <img src="resources/Mesas/mesa_6.jpg">
+                                <img src="resources/Mesas/mesa_6.jpg" width="300" height="300">
                             </button></div>
 
                         <div class=card-body>
@@ -238,13 +224,6 @@
             <div class="row text-center text-md-left mt-3 pb-3 text-light bg-dark">
 
                 <!-- Grid column -->
-                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 text-light bg-dark">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Tudo sobre:</h6>
-                    <p class="text-justify">???
-
-                    </p>
-                </div>
-                <!-- Grid column -->
 
                 <hr class="w-100 clearfix d-md-none">
 
@@ -292,25 +271,24 @@
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">Contacte-nos através de:</h6>
                     <p class="text-justify">
-                        <i class="fas fa-home mr-3"></i>Zona Industrial da Barosa, Rua Beco dos Petigais - Fração F, nº45 e 65 2400-431 Leiria
+                        Zona Industrial da Barosa, Rua Beco dos Petigais - Fração F, nº45 e 65
+                        2400-431 Leiria
                     </p>
                     <p>
-                        <i class="fas fa-envelope mr-3"></i>contacto@redoute.pt
+                        contacto@redoute.pt
                     </p>
                     <p>
-                        <i class="fas fa-phone mr-3"></i>707 20 10 10
+                        707 20 10 10
                     </p>
                     <p>
-                        <i class="fas fa-print mr-3"></i>244 81 00 00
+                        244 81 00 00
                     </p>
                 </div>
                 <!-- Grid column -->
 
             </div>
             <!-- Footer links -->
-
             <hr>
-
             <!-- Grid row -->
             <div class="row d-flex align-items-center">
                 <!-- Grid column -->
@@ -326,7 +304,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="main.js"></script>
 </body>
 
 </html>

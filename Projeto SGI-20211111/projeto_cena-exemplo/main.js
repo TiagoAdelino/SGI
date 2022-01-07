@@ -1,7 +1,3 @@
-let botaoPlay = document.getElementById("btn_play")
-let botaoPause = document.getElementById("btn_pause")
-let botaoStop = document.getElementById("btn_stop")
-
 var cena = new THREE.Scene()
 let material = new THREE.MeshNormalMaterial();
 cena.background = new THREE.Color(0xffffff);
@@ -26,10 +22,9 @@ var gridHelper = new THREE.GridHelper()
 
 var carregador = new THREE.GLTFLoader()
 carregador.load(
-    'models/cena.gltf', 
+    'models/workBench2.gltf', 
     function ( gltf ) {
         cena.add( gltf.scene )
-
         cena.traverse( function(x) {
             if (x.isMesh) {
                 x.castShadow = true
@@ -37,10 +32,22 @@ carregador.load(
                 
             }
         })
-        clipe = THREE.AnimationClip.findByName( gltf.animations, 'KeyAction' )
-        acao = misturador.clipAction( clipe )
-        acao.play()
 
+        clipe = THREE.AnimationClip.findByName( gltf.animations, 'benchExtendAction' )
+        acaoMesa = misturador.clipAction( clipe )
+        //acaoMesa.play()
+
+        clipe = THREE.AnimationClip.findByName( gltf.animations, 'legExtend1Action' )
+        acaoPerna = misturador.clipAction( clipe )
+        //acaoPerna.play()
+
+        clipe = THREE.AnimationClip.findByName( gltf.animations, 'doorAction' )
+        acaoPortaD = misturador.clipAction( clipe )
+        //acaoPortaD.play()
+
+        clipe = THREE.AnimationClip.findByName( gltf.animations, 'door1Action' )
+        acaoPortaE = misturador.clipAction( clipe )
+        //acaoPortaE.play()
     }
     
 )
@@ -70,35 +77,23 @@ botao_parar.addEventListener("click", parar)
 botao_animacao.addEventListener("click", comecar)
 
 function parar(){
-    acao.stop()
+    acaoMesa.stop()
+    acaoPerna.stop()
+    acaoPortaD.stop()
+    acaoPortaE.stop()
 }
 
 function comecar(){
-    acao.play()
-}
-
-var raycaster = new THREE.Raycaster()
-var rato = new THREE.Vector2()
-
-window.onclick = function(evento) {
-    rato.x = (evento.clientX / window.innerWidth) * 2 - 1
-    rato.y = -(evento.clientY / window.innerHeight) * 2 + 1
-
-    pegarPrimeiro()
-}
-
-function pegarPrimeiro() {
-    raycaster.setFromCamera(rato, camara)
-   
-    var intersetados = raycaster.intersectObjects(botoes)
-    if (intersetados.length > 0) {
-        alvo.material = intersetados[0].object.material;
-    }
+    acaoMesa.play()
+    acaoPerna.play()
+    acaoPortaD.play()
+    acaoPortaE.play()
 }
 
 animar()
 
 function animar() {
     requestAnimationFrame(animar)
+    misturador.update(relogio.getDelta())
     renderer.render( cena, camara )
 }

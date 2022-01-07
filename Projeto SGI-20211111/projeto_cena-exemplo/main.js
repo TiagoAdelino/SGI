@@ -12,11 +12,11 @@ var renderer = new THREE.WebGLRenderer( { canvas: meuCanvas } )
 var relogio = new THREE.Clock()
 var misturador = new THREE.AnimationMixer(cena)
 
-var camara = new THREE.PerspectiveCamera( 70, 800 / 700, 0.1, 500)
+var camara = new THREE.PerspectiveCamera( 70, 800 / 600, 0.1, 500)
 camara.position.set( -10, 10, 12 )
 camara.lookAt( 0, 0, 0 )
 
-renderer.setSize( 800, 700 )
+renderer.setSize( 800, 600 )
 renderer.shadowMap.enabled = false
 //document.body.appendChild( renderer.domElement )
 
@@ -40,6 +40,7 @@ carregador.load(
         clipe = THREE.AnimationClip.findByName( gltf.animations, 'KeyAction' )
         acao = misturador.clipAction( clipe )
         acao.play()
+
     }
     
 )
@@ -62,24 +63,18 @@ cena.add(luz3)
 var ambiente = new THREE.AmbientLight('white')
 cena.add(ambiente)
 
-let botao_rodar = document.getElementById("optionRodar")
 let botao_parar = document.getElementById("optionParar")
 let botao_animacao = document.getElementById("optionAnimacao")
 
-botao_rodar.addEventListener("click", rodar)
 botao_parar.addEventListener("click", parar)
 botao_animacao.addEventListener("click", comecar)
 
-function rodar(){
-    acaoY.play()
-}
-
 function parar(){
-    acaoY.stop()
+    acao.stop()
 }
 
 function comecar(){
-    acaoY.play()
+    acao.play()
 }
 
 var raycaster = new THREE.Raycaster()
